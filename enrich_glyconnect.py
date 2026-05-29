@@ -17,22 +17,42 @@ import csv
 # =============================================================================
 
 BASE        = "https://glycoshape.org"
-SAVE_FOLDER = "/Users/layal/Desktop/Projet - Application info/batch_results"
+SAVE_FOLDER = "batch_results"
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
 PROTEINS_IGNORE = {
-    "Q04637", "Q09666", "Q12778", "Q12830", "Q14157", "Q14684", "Q14814",
-    "Q14980", "Q2KHR3", "Q4Q843", "Q5VT52", "Q6MZP7", "Q6P4R8", "Q6PJT7-2",
-    "Q70E73", "Q7Z3J3", "Q7Z3K3-2", "Q7Z589", "Q7Z739", "Q8IWI9", "Q8N3V7",
-    "Q8NDX5", "Q8WWM7", "Q8WXI9", "Q96HA1", "Q96KR1", "Q96KX2", "Q96PK6",
-    "Q96Q06", "Q96T58", "Q99808", "Q9BYJ9", "Q9H4A3", "Q9HAU0", "Q9NR12-4",
-    "Q9NXV6", "Q9NYV4", "Q9P2N5", "Q9P2N6", "Q9UKD1", "Q9UKY1", "Q9UQ35",
-    "Q9Y2X9", "Q9Y520"
+    "O14639", "A3KN83", "E1BNC9", "F1SFZ8",
+    "O00268", "O08537", "O14920", "O60641",
+    "O75376", "P00915", "P01106", "P01833",
+    "P02470", "P02488", "P02505", "P02510",
+    "P02511", "P02545-3", "P02549", "P02730",
+    "P03070", "P03372", "P04040", "P05783",
+    "P05787", "P08047", "P08318", "P08670",
+    "P10636", "P11166", "P11171", "P11277",
+    "P11818", "P11831", "P12270", "P12839",
+    "P13646", "P15822", "P16157", "P16452",
+    "P17599", "P17955", "P18146", "P18583-1",
+    "P19527", "P19785", "P21138", "P24623",
+    "P25311", "P35658", "P37198", "P37840",
+    "P49790", "P49792", "P49884", "P51610",
+    "P52948-4", "P54939", "P68431", "P68871",
+    "P69905", "P78417", "Q04637", "Q09666",
+    "Q12778", "Q12830", "Q14157", "Q14684",
+    "Q14814", "Q14980", "Q2KHR3", "Q4Q843",
+    "Q5VT52", "Q6MZP7", "Q6P4R8", "Q6PJT7-2",
+    "Q70E73", "Q7Z3J3", "Q7Z3K3-2", "Q7Z589",
+    "Q7Z739", "Q8IWI9", "Q8N3V7", "Q8NDX5",
+    "Q8WWM7", "Q8WXI9", "Q96HA1", "Q96KR1",
+    "Q96KX2", "Q96PK6", "Q96Q06", "Q96T58",
+    "Q99808", "Q9BYJ9", "Q9H4A3", "Q9HAU0",
+    "Q9NR12-4", "Q9NXV6", "Q9NYV4", "Q9P2N5",
+    "Q9P2N6", "Q9UKD1", "Q9UKY1", "Q9UQ35",
+    "Q9Y2X9", "Q9Y520",
 }
 
-with open("/Users/layal/Desktop/Projet - Application info/proteins_1_800_clean.txt") as f:
+with open("data/proteins.txt") as f: # Chemin vers la liste des protéines
     PROTEINS = [line.strip() for line in f if line.strip()]
-#PROTEINS = PROTEINS[1600:2400]
+
 PROTEINS = [p for p in PROTEINS if p not in PROTEINS_IGNORE]
 
 print(f"Protéines après exclusion : {len(PROTEINS)} (ignoré {44 - (800 - len(PROTEINS))} de la blacklist)")
