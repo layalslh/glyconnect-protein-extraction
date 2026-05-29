@@ -34,7 +34,8 @@ pip install requests
 ```text
 data/
     proteins.txt          - liste complète des identifiants UniProt à traiter
-pv_2026.*.pdf             - procès-verbaux des réunions
+pv/
+    pv_2026.*.pdf         - procès-verbaux des réunions
 enrich_glyconnect.py      - script principal
 LICENCE.md                - licence du projet
 README.md                 - documentation du dépôt
@@ -120,16 +121,9 @@ Le code source de ce projet est distribué sous licence MIT — voir `LICENCE.md
 Les données externes utilisées par le projet proviennent de GlyConnect, UniProt, PDB et GlycoShape/Re-Glyco, selon leurs conditions d'utilisation respectives.
 
 
-
 ## Références
 
 - GlycoShape & Re-Glyco : Ives, C.M., Singh, O. et al. *Restoring protein glycosylation with GlycoShape.* Nat Methods (2024)
 - GlyConnect : [glyconnect.expasy.org](https://glyconnect.expasy.org/)
 - UniProt : [uniprot.org](https://www.uniprot.org/)
 - PDB : [rcsb.org](https://www.rcsb.org/)
-
-- GlycoShape & Re-Glyco : Ives, C.M., Singh, O. et al. *Restoring protein glycosylation with GlycoShape.* Nat Methods (2024)
-- GlyConnect : [glyconnect.expasy.org](https://glyconnect.expasy.org/)
-- UniProt : [uniprot.org](https://www.uniprot.org/)
-- PDB : [rcsb.org](https://www.rcsb.org/)
-
