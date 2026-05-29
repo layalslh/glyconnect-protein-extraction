@@ -33,12 +33,13 @@ pip install requests
 
 ```text
 data/
-    proteins.txt          - liste complète des identifiants UniProt à traiter
+    proteins.txt                            -  liste complète des identifiants UniProt à traiter
 pv/
-    pv_2026.*.pdf         - procès-verbaux des réunions
-enrich_glyconnect.py      - script principal
-LICENCE.md                - licence du projet
-README.md                 - documentation du dépôt
+    pv_2026.*.pdf                           - procès-verbaux des réunions
+enrich_glyconnect.py                        - script principal
+LICENCE.md                                  - licence du projet
+README.md                                   - documentation du dépôt
+Rapport_P08_Rania.Layal.Divine.pdf          - rapport final
 ```
 
 
